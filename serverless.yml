@@ -1,0 +1,13 @@
+service: slack-challenge-auth
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: POST
